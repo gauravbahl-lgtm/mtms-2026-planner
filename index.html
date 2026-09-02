@@ -848,7 +848,7 @@ const talks=[
     "location": "Proshansky Auditorium",
     "title": "Meta-Optics for Edge Computing Applications",
     "seniorAuthor": "Jason Valentine",
-    "authorsAffiliation": "",
+    "authorsAffiliation": "Brandon Swartz, Rahul Shah, Yuechen Yang, Yuankai Huo, Jason Valentine — Vanderbilt University, USA",
     "fullInfo": "Brandon Swartz, Rahul Shah, Yuechen Yang, Yuankai Huo, Jason Valentine — Vanderbilt University, USA This talk will focus on the use of meta-optics for implementing computation for edge sensors, serving to off-load computational operations from digital processing platforms focused on spatial and spectral pattern recognition.\n\nSegal Theatre      C201           C203",
     "sourcePages": "Booklet pp. 171-171 (PDF pages)"
   },
@@ -1506,7 +1506,7 @@ const talks=[
     "location": "Martin E. Segal Theatre",
     "title": "Nonreciprocity in a Metasurface Formed by Magnetically Biased Plasmonic Cylinders",
     "seniorAuthor": "Ioannis Katsantonis",
-    "authorsAffiliation": "",
+    "authorsAffiliation": "Anna Tasolamprou1, Constantinos Valagiannopoulos1, Ioannis Katsantonis2 — [1] National and Kapodistrian University of Athens [2] Institute of Electronic Structure and Laser, Foundation of Research and Technology Hellas, Greece",
     "fullInfo": "ased Plasmonic Cylinders Anna Tasolamprou1 , Constantinos Valagiannopoulos1 , Ioannis Katsantonis2 — [1] National and Kapodistrian University of Athens [2] Institute of Electronic Structure and Laser, Foundation of Research and Technology Hellas, Greece\n\nWe study a metasurface formed by magnetically biased plasmonic cylinders supporting nonreciprocal magnetoplasmonic modes. Using a magnetized Drude model and cylindrical wave analysis, the electromagnetic response of the structure is investigated. The metasurface exhibits asymmetric dispersion and directional surface plasmon propagation, enabling tunable nonreciprocal behavior.",
     "sourcePages": "Booklet pp. 197-199 (PDF pages)"
   },
@@ -1772,7 +1772,7 @@ const talks=[
     "location": "Elebash Recital Hall",
     "title": "Expressivity Analysis of Multilayer Programmable-Metasurface Physical Neural Network with Structural and Encoding Non-linearities",
     "seniorAuthor": "Philipp Del Hougne",
-    "authorsAffiliation": "",
+    "authorsAffiliation": "Cheima Hammami1, Luc Le Magoarou2, Christos Monochristou1, David González-Ovejero1, Ali Momeni3, Romain Fleury3, Philipp Del Hougne1 — [1] IETR, University of Rennes, France [2] IETR, INSA Rennes, France [3] Laboratory of Wave Engineering, EPFL, Switzerland",
     "fullInfo": "Physical Neural Network with Structural and Encoding Non-linearities Cheima Hammami1 , Luc Le Magoarou2 , Christos Monochristou1 , David González-Ovejero1 , Ali Momeni3 , Romain Fleury3 , Philipp Del Hougne1 — [1] IETR, University of Rennes, France [2] IETR, INSA Rennes, France [3] Laboratory of Wave Engineering, EPFL, Switzerland Non-linearity is a pivotal ingredient to the universal approximation theorem for artificial neural networks, but implementing non-linear transformations in wave-based physical neural networks (WPNNs) is notoriously challenging. Recent work has explored the use of programmable metasurfaces (PMs) in WPNNs to encode and non-linearly transform input data, while the learnable parameters were implemented in subsequent digital layers. In this work, we\n\nstudy a multilayer WPNN whose layers are PM-parametrized chaotic cavities. While the input data is encoded into the configuration of some PM elements, most PM elements are physical learnable parameters. Non-linearity arises in our WPNN due to the encoding of input data into the configuration of PM\n\nSegal Theatre     C201            C203\n\nelements and because mutual coupling between them results in a non-linear dependence of the transfer function on these PM elements’ configuration. Based on a full-wave simulation at 140 GHz of a compact chaotic cavity parametrized by a 100-element PM, we study the ability of our WPNN to approximate non-linear functions. Specifically, we examine the contribution of three factors to our WPNN’s expressivity: (i) the encoding function mapping input data to PM element characteristics, (ii) the mutual coupling strength between PM elements, and (iii) the number of WPNN layers.",
     "sourcePages": "Booklet pp. 209-210 (PDF pages)"
   },
@@ -1786,7 +1786,7 @@ const talks=[
     "location": "Martin E. Segal Theatre",
     "title": "Frozen Surface Modes and Lateral Optical Force Enhancement on Moving Interfaces",
     "seniorAuthor": "Francisco Rodríguez-Fortuño",
-    "authorsAffiliation": "",
+    "authorsAffiliation": "Stéphane Azar, Joe Bhaseen, Anatoly Zayats, Francisco Rodríguez-Fortuño — King’s College London, United Kingdom",
     "fullInfo": "ment on Moving Interfaces Stéphane Azar, Joe Bhaseen, Anatoly Zayats, Francisco Rodríguez-Fortuño — King’s College London, United Kingdom We revisited light–matter interactions under relative motion, focusing on group-velocity matching between an emitter and electromagnetic modes supported by a medium. This condition gives rise to frozen modes - wavepackets stationary in the emitter frame - resulting in dramatic enhancements of the\n\nlocal density of optical states, and optomechanical forces.",
     "sourcePages": "Booklet pp. 211-212 (PDF pages)"
   },
@@ -1814,7 +1814,7 @@ const talks=[
     "location": "C201",
     "title": "Wafer-Scale Metalens Fabrication via Photolithography and Nanoimprint Lithography for Near-Infrared Applications",
     "seniorAuthor": "Heon Lee",
-    "authorsAffiliation": "",
+    "authorsAffiliation": "Chanwoong Park, Seungyeon Lee, Minjeong Lee, Hyunsung Yoon, Heon Lee — Korea University, Korea (South)",
     "fullInfo": "Nanoimprint Lithography for Near-Infrared Applications\n\nSegal Theatre     C201           C203\n\nChanwoong Park, Seungyeon Lee, Minjeong Lee, Hyunsung Yoon, Heon Lee — Korea university, Korea (South) Metasurfaces manipulate light using subwavelength meta-atoms, enabling ultrathin optical components such as metalenses. However, conventional fabrication methods like EBL suffer from limited scalability and high cost. Here, we demonstrate two wafer-scale near-infrared metalenses fabricated by photolithography and nanoimprinting, achieving high-resolution imaging and presenting scalable, cost-effective pathways toward metalens mass production.\n\nSegal Theatre     C201           C203",
     "sourcePages": "Booklet pp. 213-214 (PDF pages)"
   },
@@ -1936,7 +1936,9 @@ function minutes(t){const [h,m]=t.split(":").map(Number);return h*60+m}
 function duration(start,end){const n=minutes(end)-minutes(start);return n>=60?`${Math.floor(n/60)}h${n%60?` ${n%60}m`:""}`:`${n}m`}
 function conflicts(t){return [...state.picked].some(id=>{if(id===t.id)return false;const o=byId.get(id);return o.date===t.date&&minutes(t.start)<minutes(o.end)&&minutes(o.start)<minutes(t.end)})}
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function card(t){const picked=state.picked.has(t.id), conflict=picked&&conflicts(t);return `<article class="talk ${picked?"picked":""} ${conflict?"conflict":""}"><div><div class="session">${esc(t.session)}</div><h3 class="title">${esc(t.title)}</h3><div class="meta"><span><strong>${esc(t.seniorAuthor)}</strong></span><span>${esc(t.location)}</span></div></div><div class="actions"><button class="pick" data-pick="${esc(t.id)}" aria-label="${picked?"Remove from":"Add to"} schedule" aria-pressed="${picked}" ${syncBusy?"disabled":""}>${picked?"&#10003;":"+"}</button><button class="details" data-detail="${esc(t.id)}">Full info</button></div>${conflict?'<div class="conflict-note">Overlaps another selected talk</div>':""}</article>`}
+function authorList(source){return source.split(/\s*—\s*/)[0].split(",").map(name=>name.replace(/-\s+/g,"").replace(/\s+/g," ").replace(/\d+\s*$/,"").trim()).filter(Boolean)}
+function authorMeta(t){const first=authorList(t.authorsAffiliation)[0]||t.seniorAuthor,last=authorList(t.fullInfo).at(-1)||t.seniorAuthor;return first===last?`<span><strong>${esc(first)}</strong> / sole</span>`:`<span><strong>${esc(first)}</strong> / first</span><span><strong>${esc(last)}</strong> / last</span>`}
+function card(t){const picked=state.picked.has(t.id), conflict=picked&&conflicts(t);return `<article class="talk ${picked?"picked":""} ${conflict?"conflict":""}"><div><div class="session">${esc(t.session)}</div><h3 class="title">${esc(t.title)}</h3><div class="meta">${authorMeta(t)}<span>${esc(t.location)}</span></div></div><div class="actions"><button class="pick" data-pick="${esc(t.id)}" aria-label="${picked?"Remove from":"Add to"} schedule" aria-pressed="${picked}" ${syncBusy?"disabled":""}>${picked?"&#10003;":"+"}</button><button class="details" data-detail="${esc(t.id)}">Full info</button></div>${conflict?'<div class="conflict-note">Overlaps another selected talk</div>':""}</article>`}
 function renderBrowseSessions(items){
   const sessions=new Map();
   items.forEach(t=>(sessions.get(t.session)||sessions.set(t.session,[]).get(t.session)).push(t));
@@ -1997,12 +1999,12 @@ function render(){
 }
 function toggle(id){updateSchedule(id)}
 function setView(view){state.view=view;$$('[data-view]').forEach(b=>b.setAttribute("aria-selected",String(b.dataset.view===view)));render()}
-function showDetail(id){const t=byId.get(id);$("#dMeta").textContent=`${t.day} / ${t.start} - ${t.end} / ${t.session}`;$("#dTitle").textContent=t.title;$("#dQuick").innerHTML=`<span><strong>${esc(t.seniorAuthor)}</strong> / senior author</span><span>${esc(t.location)}</span>`;$("#dBody").textContent=t.fullInfo;$("#dSource").textContent=`Source: ${t.sourcePages} / MTMS 2026 booklet, Aug. 27 edition`;$("#detail").showModal()}
+function showDetail(id){const t=byId.get(id);$("#dMeta").textContent=`${t.day} / ${t.start} - ${t.end} / ${t.session}`;$("#dTitle").textContent=t.title;$("#dQuick").innerHTML=`${authorMeta(t)}<span>${esc(t.location)}</span>`;$("#dBody").textContent=t.fullInfo;$("#dSource").textContent=`Source: ${t.sourcePages} / MTMS 2026 booklet, Aug. 27 edition`;$("#detail").showModal()}
 function showSessionDetail(id){
   const talk=byId.get(id),members=talks.filter(t=>t.day===talk.day&&t.session===talk.session).sort((a,b)=>minutes(a.start)-minutes(b.start));
   const start=members[0].start,end=members.reduce((v,t)=>minutes(t.end)>minutes(v)?t.end:v,members[0].end),rooms=[...new Set(members.map(t=>t.location))].join(" / ");
   $("#sMeta").textContent=`${talk.day} / ${start} - ${end}`;$("#sTitle").textContent=talk.session;$("#sQuick").innerHTML=`<span>${esc(rooms)}</span><span>${members.length} talk${members.length===1?"":"s"}</span>`;
-  $("#sBody").innerHTML=members.map(t=>`<article class="session-info-talk"><div class="eyebrow">${t.start} - ${t.end}</div><h3>${esc(t.title)}</h3><div class="meta"><strong>${esc(t.seniorAuthor)}</strong><span>${esc(t.location)}</span></div><div class="abstract">${esc(t.fullInfo)}</div><div class="source">${esc(t.sourcePages)}</div></article>`).join("");
+  $("#sBody").innerHTML=members.map(t=>`<article class="session-info-talk"><div class="eyebrow">${t.start} - ${t.end}</div><h3>${esc(t.title)}</h3><div class="meta">${authorMeta(t)}<span>${esc(t.location)}</span></div><div class="abstract">${esc(t.fullInfo)}</div><div class="source">${esc(t.sourcePages)}</div></article>`).join("");
   $("#sessionDetail").showModal();
 }
 function toast(msg){const el=$("#toast");el.textContent=msg;el.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove("show"),2200)}
