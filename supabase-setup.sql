@@ -13,7 +13,7 @@ create or replace function public.get_planner_schedule(planner_pin text)
 returns jsonb
 language plpgsql
 security definer
-set search_path = public
+set search_path = public, extensions
 as $$
 declare result jsonb;
 begin
@@ -35,7 +35,7 @@ create or replace function public.update_planner_talk(
 returns jsonb
 language plpgsql
 security definer
-set search_path = public
+set search_path = public, extensions
 as $$
 declare
   key text;
