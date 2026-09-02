@@ -1,0 +1,45 @@
+name: Initialize shared schedule
+
+on:
+  push:
+    branches: ["main"]
+    paths: [".github/workflows/init-shared-schedule.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  initialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create empty shared schedule
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -f shared-config.js ]]; then
+            echo "Shared schedule already configured."
+            exit 0
+          fi
+          headers="$(mktemp)"
+          curl --fail --silent --show-error \
+            --dump-header "$headers" \
+            --output /dev/null \
+            --request POST \
+            --header "Content-Type: application/json" \
+            --header "Accept: application/json" \
+            --data '{"version":1,"picked":[],"updatedAt":"initial"}' \
+            https://jsonblob.com/api/jsonBlob
+          location="$(awk 'BEGIN{IGNORECASE=1} /^location:/{print $2}' "$headers" | tr -d '\r' | tail -1)"
+          if [[ ! "$location" =~ ^https://jsonblob.com/api/jsonBlob/[A-Za-z0-9]+$ ]]; then
+            echo "Could not determine shared schedule URL."
+            cat "$headers"
+            exit 1
+          fi
+          printf 'window.SHARED_SCHEDULE_URL=%s;\n' "\"$location\"" > shared-config.js
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add shared-config.js
+          git commit -m "Initialize empty shared schedule"
+          git push
